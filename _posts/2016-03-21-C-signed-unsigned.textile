@@ -3,13 +3,15 @@ layout: post
 title: C Basic about signed unsigned
 ---
 
-{{ page.title }}
+h1. {{ page.title }}
+
+p(meta). 21 Mar 2016 - 北京
 ================
 
-<p class="meta">21 March 2016 - Beijing</p>
-# C语言类型隐式转换
+ C语言类型隐式转换
 http://stackoverflow.com/questions/50605/signed-to-unsigned-conversion-in-c-is-it-always-safe
 涉及C99 Standard
+{% highlight ruby %}
 According to the C99 Standard:
 
 6.3.1.8 Usual arithmetic conversions
@@ -31,9 +33,10 @@ Now we need to refer to (2) above. Your i will be converted to an unsigned value
 6.2.5 (9)
 
 A computation involving unsigned operands can never overflow, because a result that cannot be represented by the resulting unsigned integer type is reduced modulo the number that is one greater than the largest value that can be represented by the resulting type.
+{% endhighlight %}
 
 
-# C语言有/无符号数区别
+ C语言有/无符号数区别
 
 #include <stdio.h>
 
